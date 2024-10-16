@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">@color/yellowlite</color>
+    <color name="purple_500">@color/white</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FBA670</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#000000</color>
+    <color name="red">#FF3333</color>
+    <color name="green">#11D99B</color>
+    <color name="yellow">#D9D92F</color>
+    <color name="back">#E6E6E6</color>
+    <color name="back2">#ffffff</color>
+    <color name="liteRed">#FF5151</color>
+    <color name="yellowlite">#FF9958</color>
+    <color name="text_color">#A82B2B2B</color>
+    <color name="edite_text_color">#BE474747</color>
+    <color name="edite_text_hint_color">#A8474747</color>
+    <color name="cardback">#ffffff</color>
+    <color name="buttomsheet">#A8A8A8</color>
+</resources>

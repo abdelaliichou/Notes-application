@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    android:paddingLeft="5dp"
+    android:paddingTop="15dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="15dp"
+    tools:context="com.example.view.MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/yellowlite"
+        android:src="@drawable/add" />
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:id="@+id/main_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="All notes"
+            android:textColor="@color/yellowlite"
+            android:textSize="28sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/daynight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textOff="Night"
+            android:textOn="Day"
+            android:textStyle="bold"
+            android:thumb="@drawable/thumb"
+            app:showText="true"
+            app:switchTextAppearance="@style/TextToggle"
+            app:track="@drawable/track" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchRelative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/done_creating_task_button_back"
+            android:backgroundTint="@color/back2"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/white"
+            android:fontFamily="@font/product_sans_reguler"
+            android:hint="Search for note"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:textColor="@color/edite_text_color"
+            android:textColorHint="@color/edite_text_hint_color"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/clear"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_clear"
+            android:visibility="gone"
+            app:tint="@color/back" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchRelative"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/green"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            app:cardBackgroundColor="#ffffff"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_filter" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/none"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="@color/yellowlite"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/nonetext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/done_creating_task_button_back"
+                android:fontFamily="@font/product_sans_reguler"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="No filter"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/high"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#ffffff"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/hightext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/done_creating_task_button_back"
+                android:fontFamily="@font/product_sans_reguler"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="High to low"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/low"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#ffffff"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/lowtext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/done_creating_task_button_back"
+                android:fontFamily="@font/product_sans_reguler"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Low to high"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/filter"
+        android:layout_marginTop="5dp"
+        android:clipToPadding="false"
+        android:paddingTop="15dp"
+        android:paddingBottom="30dp" />
+
+
+</RelativeLayout>
